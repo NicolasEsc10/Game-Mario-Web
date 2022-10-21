@@ -1,0 +1,322 @@
+body{
+    background-color: rgb(41, 52, 98);
+}
+
+.background_index{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+.background_img{
+    width: 100%;
+    z-index: -10;
+}
+
+.blur{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #2934626e;
+    z-index: 20;
+    top: 0px;
+}
+
+.hidden{
+    color: transparent;
+}
+
+/*--------------------------------------------  HOME  ----------------------------------------------*/
+
+.home{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.title{
+    position: relative;
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 500;
+    color: #00FFFF;
+    text-align: center;
+    padding: 20px 9%;
+    margin: 100px 13% 120px;
+    border-radius: 10px;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+
+
+.home_buttons{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    z-index: 150;
+    margin-top: 3%;
+}
+
+.home_buttons a{
+    text-decoration: none;
+}
+
+.img_mario_1{
+    position: absolute;
+    width: 25%;
+    margin-left: 37%;
+    bottom: 25px;
+    border-radius: 10px;
+    border: 5px solid #151b35;
+}
+
+.titulo_mario{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 9%;
+    margin: 100px 10% 120px;
+    width: 63%;
+}
+
+/*------------------------------- BOTONES HOME ------------------------*/
+
+.index_button{
+    display: block;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 24px;
+    border: 5px solid #151b35;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #D61C4E;
+    color: #00FFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btn_start{
+    width: 30%;
+    height: 90px;
+    transition: transform, background-color, color,  ease-in-out .2s;
+
+}
+
+#btn_start:hover{
+    background-color: #FEB139;
+    color: #151b35;
+    transform: translate(0, -5px);
+}
+
+#btn_word{
+    width: 24%;
+    height: 67px;
+}
+
+.transicion{
+    transition: transform, background-color, color, ease-in-out .2s;
+}
+
+.transicion:hover{
+    background-color: #FEB139;
+    color: #151b35;
+    transform: translate(0, -5px);
+}
+
+.mover{
+    transition: transform, background-color, color,ease-in-out .2s;
+    transform: translate(-350px, -5px);
+}
+
+.mover:hover{
+    background-color: #FEB139;
+    color: #151b35;
+}
+
+.agregarPalabra{
+    position: absolute;
+    left: 38%;
+    top: 129.5%;
+    width: 24%;
+    height: 50px;
+    border-radius: 5px;
+    border: 5px solid #151b35;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #5c87d8;
+    color: #00FFFF;
+    padding: 10px 40px;
+    text-align: center;
+    z-index: -100;
+}
+
+.texto_advertencia{
+    display: inline-block;
+    margin: 10px;
+}
+
+.seta_img{
+    position: relative;
+    width: 40px;
+    top: 10px;
+    margin-left: 10px;
+}
+
+.advertiencia{
+    position: absolute;
+    display: inline-block;
+    font-family: 'SF Pixelate', sans-serif;
+    left: 63%;
+    top: 128%;
+    font-size:16px;
+    color: #FFF80A;
+    height:30px;
+}
+
+
+.titulo_alerta{
+    font-family: 'SF Pixelate', sans-serif;
+}
+
+.alerta{
+    height: 80px;
+}
+
+
+/*--------------------------------------------  GAME  ----------------------------------------------*/
+
+.home_game{
+    width: 95%;
+    height: 85%;        
+    margin:0 auto;
+    margin-top: 60px;
+    position: relative;
+    z-index: 100;
+}
+
+.img_intentos{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #151b35;
+    width: 45%;
+    bottom: 20px;
+}
+
+/*------------------------------- BOTONES GAME ------------------------*/
+
+.game_button{
+    display: inline-block;
+    position: relative;
+    top: 150px;
+    margin: 0px 12.4%;
+    border-radius: 24px;
+    border: 5px solid #151b35;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 25%;
+    height: 70px;
+    background: #D61C4E;
+    color: #00FFFF;
+    cursor: pointer;
+}
+
+.nuevoJuego{
+    transition: transform, background-color, color,  ease-in-out .2s;
+}
+
+.nuevoJuego:hover{
+    background-color: #FEB139;
+    color: #151b35;
+    transform: translate(0, -6px);
+}
+
+.rendirse{
+    transition: transform, background-color, color,  ease-in-out .2s;
+}
+
+.rendirse:hover{
+    background-color: rgb(150, 22, 22);
+    color: #7df8f8;
+    transform: translate(0, 6px);
+}
+
+/*-------------------------------  PALABRAS  ----------------------------*/
+
+#containerPalabras{
+    position: relative;
+    text-align: center;
+    bottom: 50px;
+    font-family: 'Press Start 2P', cursive;
+    color: #7df8f8;
+}
+
+#palabraUsada{
+    position: relative;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #7df8f8;
+    bottom: 20px;
+}
+
+.letter {
+    margin: 0 7px;
+    position: relative;
+}
+
+.letter::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    min-width: 12px;
+
+}
+
+#wordContainer {
+    margin-top: 20px;
+}
+
+/*-------------------------------  ALERTAS  ----------------------------*/
+
+.swal2-container.swal2-center>.swal2-popup{
+    font-family: 'SF Pixelate', sans-serif;
+    border: 7px solid #26305e;
+    height: 350px;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.oculto{
+
+    display: none;
+
+}
