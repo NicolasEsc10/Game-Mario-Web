@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,49 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Juego del ahorcado</title>
 </head>
 <body>
-
     <div class="container">
-
         <div class="background_index">
             <img class="background_img" src="img/background-mario.png" alt="background-mario">
             <div class="transparnt"></div>
             <div class="blur"></div>
         </div>
-        
-
         <div class="home ">
-            
             <div class="home_buttons">
-
                 <img class="img_mario_1" src="img/gif-mario.gif" alt="gif-mario">
                 <h1 class="title">BIENVENIDOS AL JUEGO DEL AHORCADO</h1>
-
-
                 <button  class="index_button" id="btn_start" type="button">Iniciar juego</button>
-
                 <button  class="index_button transicion" id="btn_word" type="button">Agregar nueva palabra</button>
-
                 <input class="agregarPalabra oculto" id="añadirpalabra" type="text">
                 <div class="texto_advertencia oculto">
                     <label class="advertiencia" for="añadirpalabra"><img class="seta_img" src="img/monedas.png"> Solo letras y sin acentos</label>
                 </div>
-                
-
-    
             </div>
-
         </div>
-
-        
-
         <div class="home_Game oculto">
-
             <img class="img_intentos img_fallo_0 " src="img/fallo_n0.png" > 
             <img class="img_intentos img_fallo_1 oculto" src="img/fallo_n1.png" > 
             <img class="img_intentos img_fallo_2 oculto" src="img/fallo_n2.png" > 
@@ -58,29 +40,15 @@
             <img class="img_intentos img_fallo_5 oculto" src="img/fallo_n5.png" > 
             <img class="img_intentos img_fallo_6 oculto" src="img/fallo_n6.png" >
             <img class="img_intentos img_fallo_7 oculto" src="img/ganaste.png" >
-
             <div class="usedLetters"></div>
             <div class="wordContainer"></div>
-
             <button  class="game_button nuevoJuego"  type="button"><span>Nuevo Juego</span></button>
             <button  class="game_button rendirse"  type="button"><span>Rendirse</span></button>
-
             <div id="containerPalabras"></div>
-
             <div id="palabraUsada"></div>
-            
         </div>
-
     </div>
 
-
-    <!--juego de ahorcados, tematicas: 
-    -trivias
-    -tematica de videojuegos
-    -futbol
-    -
-    -
-    -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 

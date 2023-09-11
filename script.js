@@ -33,9 +33,19 @@ const Toast = Swal.mixin({
     timerProgressBar: true,
     width: '30%',
     background: '#FEB139',
-    color: '#00FFFF',
+    color: '#00FFFF'
   })
 
+const ToastWrong = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    width: '30%',
+    background: '#d61c35',
+    color: '#00FFFF'
+})
 
 const ganaContainer = Swal.mixin({
     position: 'center',
@@ -60,8 +70,6 @@ const pierdeContainer = Swal.mixin({
   })
 
 
-
-
 function alertEfect(){
     Toast.fire({
         customClass: {
@@ -69,9 +77,20 @@ function alertEfect(){
             title: 'titulo_alerta',
             icon: 'icono_alerta'
         },
-    
         icon: 'success',
         title: 'PALABRA AGREGADA CORRECTAMENTE',
+      })
+}
+
+function alertEfectWrong(){
+    ToastWrong.fire({
+        customClass: {
+            popup: 'alerta',
+            title: 'titulo_alerta',
+            icon: 'icono_alerta'
+        },
+        icon: 'error',
+        title: 'LA PALABRA NO SE PUDO AGREGADA CORRECTAMENTE',
       })
 }
 
@@ -80,7 +99,6 @@ function alertaGanaste(){
         customClass: {
         popup: 'alerta_Perdiste',
         title: 'titulo_perdiste',
-        text: 'coso',
         confirmButtonText: 'game_button'
     },
     })
@@ -91,11 +109,9 @@ function alertaPerdiste(){
             customClass: {
             popup: 'alerta_Perdiste',
             title: 'titulo_perdiste',
-            text: 'coso',
             confirmButtonText: 'game_button'
         },
       })
-    
 }
 
 
@@ -109,10 +125,7 @@ const img_fallo_5 = document.querySelector('.img_fallo_5');
 const img_fallo_6 = document.querySelector('.img_fallo_6');
 const ganaste = document.querySelector('.img_fallo_7');
 
-  var contador = 0;
-
-
-
+var contador = 0;
 
 function cambio(){
     if (contador == 0){
@@ -121,22 +134,17 @@ function cambio(){
         addText.classList.remove('oculto')
         warningText.classList.remove('oculto')
         contador = 1
-
     }
-
     else{
         botonword.classList.remove('mover')
         botonword.classList.add('transicion')
         addText.classList.add('oculto')
         warningText.classList.add('oculto')
         añadirPalabra()
-        alertEfect()
+
         contador = 0
-        
     }
 }
-
-
 
 addText.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
@@ -147,7 +155,13 @@ addText.addEventListener('keyup', (e) => {
 
 function añadirPalabra(){
     let nuevoDato = document.querySelector('.agregarPalabra').value;
-    words.push(nuevoDato)
+    if (nuevoDato == ""){
+        alertEfectWrong()
+    }
+    else{
+        words.push(nuevoDato)
+        alertEfect()
+    }
 }
 
 botonword.addEventListener('click', () => {
@@ -164,7 +178,6 @@ function remover_imagen(){
     img_fallo_6.classList.add('oculto')
     img_fallo_0.classList.add('oculto')
 }
-
 
 let selectedWord;
 let usedLetters;
@@ -188,7 +201,6 @@ const wrongLetter = () => {
     else{
         fallos()
     }
-
 }
 
 const badGame = () => {
@@ -204,11 +216,7 @@ const endGame = () => {
 }
 
 function fallos(){
-
     if(mistakes === 0){
-
-
-
     }
     if(mistakes === 1){
         img_fallo_0.classList.add('oculto')
@@ -230,7 +238,6 @@ function fallos(){
         img_fallo_4.classList.add('oculto')
         img_fallo_5.classList.remove('oculto')
     }
-    
 }
 
 const correctLetter = letter => {
@@ -287,7 +294,6 @@ const startGame = () => {
     remover_imagen()
     img_fallo_0.classList.remove('oculto')
     document.addEventListener('keydown', letterEvent);
-    
 }
 
 
